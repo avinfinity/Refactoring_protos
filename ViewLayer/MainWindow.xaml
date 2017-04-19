@@ -4,22 +4,22 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
 
-        <Button Command="{Binding LoadVolume}" Content="Load Volume" Margin="1"/>
-        <Button Command="{Binding ModifyVolume}" Content="Modify Volume" Grid.Column="1" Margin="1"/>
+        <Button Command="{Binding LoadVolume}" Content="Load Volume" Margin="1" />
+        <Button Command="{Binding ModifyVolume}" Content="Modify Volume" Grid.Column="1" Margin="1" />
         <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
-            <ItemsControl ItemsSource="{Binding Volumes}" >
+            <ItemsControl ItemsSource="{Binding Volumes}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <StackPanel Orientation="Vertical"/>
+                        <StackPanel Orientation="Vertical" />
                     </ItemsPanelTemplate>
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
@@ -27,36 +27,33 @@
                         <Border BorderBrush="Black" BorderThickness="1" CornerRadius="10" Margin="5">
                         <Grid Margin="20">
                             <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                                <RowDefinition/>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
                             </Grid.RowDefinitions>
 
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock Text="Name" Grid.Row="0" Grid.Column="0"/>
-                            <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
+                            <TextBlock Text="Name" Grid.Row="0" Grid.Column="0" />
+                            <TextBlock Text="{Binding Name}" Grid.Row="0" Grid.Column="1" />
 
-                            <TextBlock Text="Width" Grid.Row="1" Grid.Column="0"/>
-                            <TextBlock Text="{Binding Width}" Grid.Row="1" Grid.Column="1"/>
+                            <TextBlock Text="Width" Grid.Row="1" Grid.Column="0" />
+                            <TextBlock Text="{Binding Width}" Grid.Row="1" Grid.Column="1" />
 
-                            <TextBlock Text="Height" Grid.Row="2" Grid.Column="0"/>
-                            <TextBlock Text="{Binding Height}" Grid.Row="2" Grid.Column="1"/>
+                            <TextBlock Text="Height" Grid.Row="2" Grid.Column="0" />
+                            <TextBlock Text="{Binding Height}" Grid.Row="2" Grid.Column="1" />
 
-                            <TextBlock Text="Depth" Grid.Row="3" Grid.Column="0"/>
-                            <TextBlock Text="{Binding Depth}" Grid.Row="3" Grid.Column="1"/>
-
+                            <TextBlock Text="Depth" Grid.Row="3" Grid.Column="0" />
+                            <TextBlock Text="{Binding Depth}" Grid.Row="3" Grid.Column="1" />
                         </Grid>
                         </Border>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-       
-        
     </Grid>
 </Window>

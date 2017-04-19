@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace CommonLayer
@@ -12,10 +8,10 @@ namespace CommonLayer
     {
         #region Fields
 
-        readonly Action<T> _execute = null;
-        readonly Predicate<T> _canExecute = null;
+        private readonly Action<T> _execute = null;
+        private readonly Predicate<T> _canExecute = null;
 
-        #endregion // Fields
+        #endregion Fields
 
         #region Constructors
 
@@ -38,7 +34,7 @@ namespace CommonLayer
             _canExecute = canExecute;
         }
 
-        #endregion // Constructors
+        #endregion Constructors
 
         #region ICommand Members
 
@@ -59,8 +55,6 @@ namespace CommonLayer
             _execute((T)parameter);
         }
 
-        #endregion // ICommand Members
+        #endregion ICommand Members
     }
-
-
 }
