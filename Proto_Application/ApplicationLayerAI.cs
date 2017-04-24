@@ -22,6 +22,8 @@ namespace Proto_Application
 
         public void ProcessSliceWise()
         {
+            //These instances would come from configurations/containers !!
+            //As of now they are craeted here just to make code more clear
             var sliceReader = new SliceReader();
             var generator = new SliceTileGenerator();
 
@@ -32,6 +34,8 @@ namespace Proto_Application
 
         public void ProcessBlockWise()
         {
+            //These instances would come from configurations/containers !!
+            //As of now they are craeted here just to make code more clear
             var blockReader = new BlockReader();
             var generator = new BlockTileGenerator();
 
